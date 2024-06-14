@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     ['global']: './src/global/index.js',
     ['home']: './src/home/index.js',
-    ['about']: './src/about/index.js',
+    ['webflow-design-agency']:
+      './src/ThunderClap-website/services/webflow-design-agency/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
