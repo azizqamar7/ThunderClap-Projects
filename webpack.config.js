@@ -7,6 +7,8 @@ module.exports = {
     ['home']: './src/home/index.js',
     ['webflow-design-agency']:
       './src/ThunderClap-website/services/webflow-design-agency/index.js',
+    ['webflow-maintainence']:
+      './src/ThunderClap-website/services/webflow-maintainence/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

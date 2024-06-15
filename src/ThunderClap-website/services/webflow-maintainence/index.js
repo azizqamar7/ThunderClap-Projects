@@ -1,8 +1,8 @@
 /**
- * For Webflow Design page js
+ * For Webflow Maintanence page js
  */
 
-console.log('Hello from Webflow Design folder')
+console.log('Hello from Webflow Maintanence folder')
 
 import { gsap } from 'gsap'
 // import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -29,43 +29,50 @@ window.addEventListener('DOMContentLoaded', (event) => {
         '<45%'
       )
 
-    const heroImageTl = gsap.timeline()
-    const dotSvgPath = document.querySelector('.dot-line')
-    const dotSvgPathLength = dotSvgPath.getTotalLength()
+    const heroTl = gsap.timeline()
 
-    heroImageTl
+    heroTl
       .from('.agency-hero_image-wrapper > img', {
         opacity: 0,
         duration: 1,
         y: 20,
       })
       .from(
-        '.webflow-logo, .figma-logo',
-        { scale: 0, ease: 'back.out(3)', stagger: { amount: 0.3 } },
-        '<35%'
-      )
-      .from('.dot-arrow', { scale: 0 }, '<35%')
-      .from('.color-swatch', { y: '40%', opacity: 0 }, '-=1')
-      .from(dotSvgPath, { strokeDashoffset: -dotSvgPathLength }, '<35%')
-      .from('.figma-dot svg', { scale: 0 }, '<35%')
-      .from('.designer-cursor-svg', { x: '-50%', y: '-50%', opacity: 0 })
-      .from('.developer-cursor', { x: '50%', y: '50%', opacity: 0 }, '<35%')
-      .from('.designer-svg svg', { scale: 0 }, '<')
-      .from(
-        '.figma-comment-group .comment-svg',
-        { scale: 0, transformOrigin: '50% 50%' },
-        '<-100%'
-      )
-      .from(
-        '.figma-comment-group g',
-        { scaleX: 0, transformOrigin: '100% 0%' },
-        '<50%'
+        '.figma-logo-wrapper, .loom-logo, .notion-logo, .slack-logo, .webflow-comment, .code-embed',
+        { scale: 0, ease: 'back.out', stagger: 0.2 },
+        '<45%'
       )
   }
 
   sectionHero()
 
   // Hero Section
+
+  // Section Management
+  const sectionManagement = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section_agency-management h2',
+        start: 'top 70%',
+      },
+    })
+
+    tl.from('.section_agency-management h2', {
+      duration: 0.7,
+      ease: 'power2.out',
+      opacity: 0,
+      y: 30,
+    }).from('.agency_mangement-block', {
+      duration: 0.7,
+      ease: 'power2.out',
+      opacity: 0,
+      y: 30,
+      stagger: 0.2,
+    })
+  }
+
+  sectionManagement()
+  // Section Management
 
   // Services Section
   const sectionServices = () => {
@@ -102,162 +109,153 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     tl.from('.section_agency-whyus .agency-sub-title', {})
       .from('.section_agency-whyus h2', {}, '<45%')
-      .from('.section_agency-whyus [sub-text]', {}, '<45%')
       .from('.whyus-grid_item', { stagger: { amount: 0.2 } }, '<45%')
 
-    const cardTl1 = gsap.timeline({
+    const cardTl5 = gsap.timeline({
       scrollTrigger: {
-        trigger: '.whyus-grid_item.is-1',
+        trigger: '.whyus-grid_item.is-5',
         start: 'top 50%',
       },
     })
 
-    cardTl1.from('.whyus-grid_item-image.is-1', {
-      x: '20%',
-      duration: 1,
-      ease: 'power4.out',
-      opacity: 0,
-    })
-
-    const cardTl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.whyus-grid_item.is-2',
-        start: 'top 50%',
-      },
-    })
-
-    cardTl2
-      .from('.svg-data', {
+    cardTl5
+      .from('.whyus-grid_item-image.is-5', {
         x: '20%',
         opacity: 0,
-        duration: 1,
         ease: 'power4.out',
-        delay: 0.5,
+        duration: 1,
       })
       .from(
-        '.svg-user-block, .svg-search',
-        {
-          y: '20%',
-          opacity: 0,
-          ease: 'power4.out',
-          stagger: { amount: 0.2, from: 'end' },
-        },
-        '<45%'
-      )
-
-    const cardTl3 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.whyus-grid_item.is-3',
-        start: 'top 50%',
-      },
-      defaults: { ease: 'back.out(1.7)' },
-    })
-
-    const pathWebflowToZap = document.querySelector('.path-webflow-to-zap')
-    const pathWebflowToZapLength = pathWebflowToZap.getTotalLength()
-    const pathWebflowToMarketo = document.querySelector(
-      '.path-webflow-to-marketo'
-    )
-    const pathWebflowToMarketoLength = pathWebflowToMarketo.getTotalLength()
-    const pathWebflowToJs = document.querySelector('.path-webflow-to-js')
-    const pathWebflowToJsLength = pathWebflowToJs.getTotalLength()
-    const pathWebflowToHubspot = document.querySelector(
-      '.path-webflow-to-hubspot'
-    )
-    const pathWebflowToHubspotLength = pathWebflowToHubspot.getTotalLength()
-    const pathWebflowToMs = document.querySelector('.path-webflow-to-ms')
-    const pathWebflowToMsLength = pathWebflowToMs.getTotalLength()
-    const pathWebflowToGa = document.querySelector('.path-webflow-to-ga')
-    const pathWebflowToGaLength = pathWebflowToGa.getTotalLength()
-    const pathWebflowToHotjar = document.querySelector(
-      '.path-webflow-to-hotjar'
-    )
-    const pathWebflowToHotjarLength = pathWebflowToHotjar.getTotalLength()
-
-    cardTl3
-      .from('.svg-webflow', { scale: 0, transformOrigin: '50% 50%' })
-      .from(
-        '.svg-hubspot, .svg-zapier, .svg-marketo, .svg-js, .svg-ga, .svg-ms, .svg-hotjar',
+        '.setting-svg, .chat-svg',
         {
           scale: 0,
-          transformOrigin: '50% 50%',
-          stagger: { amount: 1, from: 'random' },
+          stagger: 0.2,
+          ease: 'back.out',
         },
         '<45%'
       )
-      .from(pathWebflowToZap, {
-        strokeDashoffset: -pathWebflowToZapLength,
-        duration: 1,
-      })
+      .set('.cms-list-image', { overflow: 'clip' })
+      .from('.cms-list-image img', { x: '100%', opacity: 0 }, '<45%')
       .from(
-        pathWebflowToGa,
-        {
-          strokeDashoffset: -pathWebflowToGaLength,
-          duration: 1,
-        },
-        '<'
-      )
-      .from(
-        pathWebflowToHotjar,
-        {
-          strokeDashoffset: -pathWebflowToHotjarLength,
-          duration: 1,
-        },
-        '<'
-      )
-      .from(
-        pathWebflowToHubspot,
-        {
-          strokeDashoffset: -pathWebflowToHubspotLength,
-          duration: 1,
-        },
-        '<'
-      )
-      .from(
-        pathWebflowToJs,
-        {
-          strokeDashoffset: -pathWebflowToJsLength,
-          duration: 1,
-        },
-        '<'
-      )
-      .from(
-        pathWebflowToMarketo,
-        {
-          strokeDashoffset: -pathWebflowToMarketoLength,
-          duration: 1,
-        },
-        '<'
-      )
-      .from(
-        pathWebflowToMs,
-        {
-          strokeDashoffset: -pathWebflowToMsLength,
-          duration: 1,
-        },
-        '<'
+        '.designer-cursor-svg-5',
+        { x: '100%', y: '100%', opacity: 0 },
+        '<45%'
       )
 
-    const cardTl4 = gsap.timeline({
+    const cardTl6 = gsap.timeline({
       scrollTrigger: {
-        trigger: '.whyus-grid_item.is-4',
+        trigger: '.whyus-grid_item.is-6',
         start: 'top 50%',
       },
     })
 
-    cardTl4
-      .from('.whyus-grid_item-image.is-4', {
+    cardTl6
+      .from('.whyus-grid_item-image.is-6 img', { y: '100%' })
+      .from('.ayush-pfp', { scale: 0, ease: 'back.out' }, '<75%')
+      .from('.circle-1', { rotation: 360, repeat: -1, duration: 50 }, 0)
+      .from('.circle-2', { rotation: -360, repeat: -1, duration: 50 }, 0)
+
+    const cardTl7 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.whyus-grid_item.is-7',
+        start: 'top 50%',
+      },
+    })
+
+    cardTl7
+      .from('.whyus-grid_item-image.is-7 img', {
         x: '20%',
         opacity: 0,
-        duration: 1,
         ease: 'power4.out',
+        duration: 1,
       })
-      .from('.text-setting-svg svg', { opacity: 0, y: '-30%', stagger: 0.2 })
-      .from('.cms-cursor-svg', { opacity: 0, x: '60%', y: '60%' }, '<')
+      .from(
+        '.webflow-logo-svg, .zap-svg, .grow-svg',
+        { scale: 0, ease: 'back.out' },
+        '<75%'
+      )
+
+    const cardTl8 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.whyus-grid_item.is-8',
+        start: 'top 45%',
+      },
+    })
+
+    cardTl8
+      .from('.whyus-grid_item-image.is-8 svg circle', {
+        opacity: 0,
+        stagger: 0.2,
+      })
+      .from(
+        '.pfp-1, .pfp-2, .pfp-3, .pfp-4',
+        { scale: 0, ease: 'back.out', stagger: 0.2 },
+        '<45%'
+      )
+
+    const cardTl9 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.whyus-grid_item.is-9',
+        start: 'top 45%',
+      },
+    })
+
+    cardTl9.from('.whyus-grid_item-image.is-9 img, .chat-icon', {
+      scale: 0,
+      stagger: 0.2,
+      ease: 'back.out(1)',
+    })
+
+    const cardTl10 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.whyus-grid_item.is-10',
+        start: 'top 50%',
+      },
+    })
+
+    cardTl10
+      .from('.whyus-grid_item-image.is-10', {
+        x: '20%',
+        opacity: 0,
+        ease: 'power4.out',
+        duration: 1,
+      })
+      .from(
+        '.webflow-svg, .webflow-retry',
+        {
+          scale: 0,
+          stagger: 0.2,
+          ease: 'back.out',
+        },
+        '<45%'
+      )
+      .from(
+        '.designer-cursor-svg-10',
+        { x: '100%', y: '-100%', opacity: 0 },
+        '<45%'
+      )
   }
 
   sectionWhyUs()
   // Section Why Us
+
+  // Section Pricing
+  const sectionPricing = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section_agency-pricing .container-large',
+        start: 'top 70%',
+      },
+      defaults: { duration: 0.7, ease: 'power2.out', opacity: 0, y: 30 },
+    })
+
+    tl.from('.section_agency-pricing .agency-sub-title', {})
+      .from('.section_agency-pricing h2', {}, '<45%')
+      .from('.pricing-block', { stagger: { amount: 0.5 } }, '<45%')
+  }
+
+  sectionPricing()
+  // Section Pricing
 
   // Section Client
   const sectionClient = () => {
