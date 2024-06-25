@@ -9,6 +9,8 @@ module.exports = {
       './src/ThunderClap-website/services/webflow-design-agency/index.js',
     ['webflow-maintainence']:
       './src/ThunderClap-website/services/webflow-maintainence/index.js',
+    ['refo/home']: './src/Refo/home/index.js',
+    ['steel']: './src/steel/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
