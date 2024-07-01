@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       ease: 'power2.out',
     })
       .from('.home-hero .text-size-tiny', defaults)
+      .set('.navbar_component', { clearProps: 'all' })
       .from('.home-hero h1', defaults, '<45%')
       .from('.home-hero p', defaults, '<45%')
       .from('.home-hero .button-group', defaults, '<45%')
