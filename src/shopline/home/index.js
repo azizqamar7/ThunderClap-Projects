@@ -217,7 +217,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
           '<45%'
         )
         .from('[home-speed-block-4] h3', defaults, 0.2)
-        .from('[home-speed-block-4] p', defaults, '<45%')
+        // .from('[home-speed-block-4] p', defaults, '<45%')
+        .from(
+          '[home-speed-block-4] .pointer-item, [home-speed-block-4] a',
+          { opacity: 0, x: '3%', stagger: { amount: 0.3 } },
+          '<45%'
+        )
         .from('[home-speed-block-4] .heading-size-medium', defaults, '<35%')
 
       createScrollTrigger('[home-speed-block-4]', tl, 'top 65%')
