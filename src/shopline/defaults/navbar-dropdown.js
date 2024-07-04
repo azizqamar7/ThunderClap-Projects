@@ -1,6 +1,4 @@
 export const navbarDropdown = () => {
-  console.log('navabe')
-
   const tabButtons = document.querySelectorAll('.dropdown-platform_tab')
   const tabContents = document.querySelectorAll('.dropdown-platform_tab-pane')
 
