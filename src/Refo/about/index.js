@@ -14,6 +14,10 @@ import { sectionBenefits } from '../components/section-benefits'
 window.addEventListener('DOMContentLoaded', (event) => {
   gsap.registerPlugin(ScrollTrigger)
 
+  gsap.set('.page-wrapper', {
+    opacity: 1,
+  })
+
   // Section Hero
   sectionHero()
 
