@@ -12,7 +12,7 @@ import { defaults } from '../defaults/interactionParams'
 import { sectionProducts } from './section-products'
 import { sectionCtaDemo } from './section-cta-demo'
 import { sectionFeature } from './section-features'
-import { sectionBenefits } from './section-benefits'
+import { sectionBenefits } from '../components/section-benefits'
 import { sectionCustomers } from './section-customers'
 // import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
