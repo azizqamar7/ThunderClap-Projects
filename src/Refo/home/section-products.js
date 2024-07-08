@@ -214,6 +214,43 @@ export const sectionProducts = () => {
 
   mockUp2Ix()
 
+  // MockUp 3
+  const mockUp3Ix = () => {
+    const pathLine = document.querySelector('.path-line-3')
+    const pathLineLength = pathLine.getTotalLength()
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '[home-block-3] .home-products_block-image',
+        start: 'top 65%',
+      },
+    })
+    const pathLines = document.querySelectorAll('.g-line-3')
+
+    const pathLineTl = gsap.timeline()
+    pathLines.forEach((pathLine) => {
+      const pathLineLength = pathLine.getTotalLength()
+
+      pathLineTl.from(
+        pathLine,
+        {
+          strokeDashoffset: -pathLineLength,
+          duration: 0.4,
+        },
+        0
+      )
+    })
+
+    tl.from('.rect-bg-3', defaults)
+    tl.from('.g-process-data', defaults, '<45%')
+    tl.from(pathLine, { strokeDashoffset: -pathLineLength, duration: 2 }, '<5%')
+    tl.add(pathLineTl, '<45%').from('.g-trigger', defaults, '<45%')
+
+    tl.timeScale(1.2)
+  }
+
+  mockUp3Ix()
+
   // MockUp 4
   const mockUp4Ix = () => {
     const pathLine = document.querySelector('.path-line-4')
