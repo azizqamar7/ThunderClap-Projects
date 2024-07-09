@@ -25,8 +25,9 @@ export const sectionCtaDemo = () => {
   imageTl
     .from('.rect-bg-5', defaults)
     .from('.g-line-divider', { scaleX: 0 }, '<45%')
-    .from('.ocr-image img', { y: '110%' })
-    .from('.g-ocr', { y: '-110%' }, '<')
+    .to('.ocr-image img', { y: '110%', duration: 2 })
+    .from('.g-ocr', { y: '-110%', duration: 2 }, '<')
+    .to('.ocr-image img', { y: '0%', duration: 0.7 })
 
   imageTl.timeScale(1.25)
 }
