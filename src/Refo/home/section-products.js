@@ -122,54 +122,44 @@ export const sectionProducts = () => {
 
     const tlLoop = gsap.timeline({ paused: true, repeat: -1 })
 
-    // tlLoop
-    //   .to({}, { duration: 2 })
-    //   .to('.g-color-palletes', { opacity: 0, y: '-10%' })
-    //   .to('.g-form', { opacity: 0, y: '-10%' }, '<15%')
-    //   .to({}, { duration: 2 })
-    //   .fromTo(
-    //     '.g-color-palletes-green',
-    //     { opacity: 0, y: '10%' },
-    //     { opacity: 1, y: '0%' },
-    //     '<15%'
-    //   )
-    //   .fromTo(
-    //     '.g-form-green',
-    //     { opacity: 0, y: '10%' },
-    //     { opacity: 1, y: '0%' },
-    //     '<15%'
-    //   )
-    //   .to({}, { duration: 2 })
-    //   .to('.g-color-palletes-green', { opacity: 0, y: '-10%' }, '<15%')
-    //   .to('.g-form-green', { opacity: 0, y: '-10%' }, '<15%')
-    //   .set('.g-color-palletes', { opacity: 0, y: '10%' })
-    //   .set('.g-form', { opacity: 0, y: '10%' })
-    //   .to('.g-color-palletes', { opacity: 1, y: '0%' }, '<15%')
-    //   .to('.g-form', { opacity: 1, y: '0%' }, '<15%')
     tlLoop
       .to({}, { duration: 2 })
-      .to('.g-blue-svg', { opacity: 0, y: '-10%' })
-      // .to('.g-form', { opacity: 0, y: '-10%' }, '<15%')
+      .to('.g-color-palletes', { opacity: 0, y: '-10%' })
+      .to('.g-form', { opacity: 0, y: '-10%' }, '<15%')
       .to({}, { duration: 2 })
       .fromTo(
-        '.g-green-svg',
+        '.g-color-palletes-green',
         { opacity: 0, y: '10%' },
         { opacity: 1, y: '0%' },
         '<15%'
       )
-      // .fromTo(
-      //   '.g-form-green',
-      //   { opacity: 0, y: '10%' },
-      //   { opacity: 1, y: '0%' },
-      //   '<15%'
-      // )
+      .fromTo(
+        '.g-form-green',
+        { opacity: 0, y: '10%' },
+        { opacity: 1, y: '0%' },
+        '<15%'
+      )
       .to({}, { duration: 2 })
-      .to('.g-green-svg', { opacity: 0, y: '-10%' }, '<15%')
-      // .to('.g-form-green', { opacity: 0, y: '-10%' }, '<15%')
-      .set('.g-blue-svg', { opacity: 0, y: '10%' })
-      // .set('.g-form', { opacity: 0, y: '10%' })
-      .to('.g-blue-svg', { opacity: 1, y: '0%' }, '<15%')
-    // .to('.g-form', { opacity: 1, y: '0%' }, '<15%')
+      .to('.g-color-palletes-green', { opacity: 0, y: '-10%' }, '<15%')
+      .to('.g-form-green', { opacity: 0, y: '-10%' }, '<15%')
+      .set('.g-color-palletes', { opacity: 0, y: '10%' })
+      .set('.g-form', { opacity: 0, y: '10%' })
+      .to('.g-color-palletes', { opacity: 1, y: '0%' }, '<15%')
+      .to('.g-form', { opacity: 1, y: '0%' }, '<15%')
+    // tlLoop
+    //   .to({}, { duration: 2 })
+    //   .to('.g-blue-svg', { opacity: 0, y: '-10%' })
+    //   .to({}, { duration: 2 })
+    //   .fromTo(
+    //     '.g-green-svg',
+    //     { opacity: 0, y: '10%' },
+    //     { opacity: 1, y: '0%' },
+    //     '<15%'
+    //   )
+    //   .to({}, { duration: 2 })
+    //   .to('.g-green-svg', { opacity: 0, y: '-10%' }, '<15%')
+    //   .set('.g-blue-svg', { opacity: 0, y: '10%' })
+    //   .to('.g-blue-svg', { opacity: 1, y: '0%' }, '<15%')
 
     const pathLines = document.querySelectorAll('.g-line')
 
