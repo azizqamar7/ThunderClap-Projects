@@ -55,6 +55,7 @@ export const sectionHero = () => {
         {
           strokeDashoffset: -pathLineLength,
           duration: 1,
+          force3D: true,
         },
         0
       )
@@ -71,6 +72,7 @@ export const sectionHero = () => {
         {
           strokeDashoffset: -pathLineLength,
           duration: 1,
+          force3D: true,
         },
         0
       )
