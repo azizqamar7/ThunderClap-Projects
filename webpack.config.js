@@ -15,6 +15,7 @@ module.exports = {
 
     ['refo/home']: './src/Refo/home/index.js',
     ['refo/about']: './src/Refo/about/index.js',
+    ['refo/products/oboarding']: './src/Refo/products/onboarding/index.js',
 
     ['steel']: './src/steel/index.js',
 
