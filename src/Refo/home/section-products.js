@@ -121,45 +121,34 @@ export const sectionProducts = () => {
     })
 
     const tlLoop = gsap.timeline({ paused: true, repeat: -1 })
+    const greenPrimaryColor = '#67E6A7'
+    const greenSecondaryColor = '#0B816D'
+    const bluePrimaryColor = '#1A84F7'
+    const blueSecondaryColor = '#011665'
 
     tlLoop
-      .to({}, { duration: 2 })
-      .to('.g-color-palletes', { opacity: 0, y: '-10%' })
-      .to('.g-form', { opacity: 0, y: '-10%' }, '<15%')
-      .to({}, { duration: 2 })
-      .fromTo(
-        '.g-color-palletes-green',
-        { opacity: 0, y: '10%' },
-        { opacity: 1, y: '0%' },
-        '<15%'
+      .to('.circle-color-primary', { attr: { fill: greenPrimaryColor } })
+      .to(
+        '.circle-color-secondary',
+        { attr: { fill: greenSecondaryColor } },
+        '<'
       )
-      .fromTo(
-        '.g-form-green',
-        { opacity: 0, y: '10%' },
-        { opacity: 1, y: '0%' },
-        '<15%'
+      .to('.path-form-title', { attr: { fill: greenSecondaryColor } }, '<')
+      .to('.rect-form-progress', { attr: { fill: greenPrimaryColor } }, '<')
+      .to('.rect-form-button', { attr: { fill: greenPrimaryColor } }, '<')
+      .to('.g-next-logo', { opacity: 1 }, '<')
+      .to({}, { duration: 1 })
+      .to('.circle-color-primary', { attr: { fill: bluePrimaryColor } })
+      .to(
+        '.circle-color-secondary',
+        { attr: { fill: blueSecondaryColor } },
+        '<'
       )
-      .to({}, { duration: 2 })
-      .to('.g-color-palletes-green', { opacity: 0, y: '-10%' }, '<15%')
-      .to('.g-form-green', { opacity: 0, y: '-10%' }, '<15%')
-      .set('.g-color-palletes', { opacity: 0, y: '10%' })
-      .set('.g-form', { opacity: 0, y: '10%' })
-      .to('.g-color-palletes', { opacity: 1, y: '0%' }, '<15%')
-      .to('.g-form', { opacity: 1, y: '0%' }, '<15%')
-    // tlLoop
-    //   .to({}, { duration: 2 })
-    //   .to('.g-blue-svg', { opacity: 0, y: '-10%' })
-    //   .to({}, { duration: 2 })
-    //   .fromTo(
-    //     '.g-green-svg',
-    //     { opacity: 0, y: '10%' },
-    //     { opacity: 1, y: '0%' },
-    //     '<15%'
-    //   )
-    //   .to({}, { duration: 2 })
-    //   .to('.g-green-svg', { opacity: 0, y: '-10%' }, '<15%')
-    //   .set('.g-blue-svg', { opacity: 0, y: '10%' })
-    //   .to('.g-blue-svg', { opacity: 1, y: '0%' }, '<15%')
+      .to('.path-form-title', { attr: { fill: bluePrimaryColor } }, '<')
+      .to('.rect-form-progress', { attr: { fill: bluePrimaryColor } }, '<')
+      .to('.rect-form-button', { attr: { fill: bluePrimaryColor } }, '<')
+      .to('.g-next-logo', { opacity: 0 }, '<')
+      .to({}, { duration: 1 })
 
     const pathLines = document.querySelectorAll('.g-line')
 
