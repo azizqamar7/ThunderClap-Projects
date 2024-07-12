@@ -13,6 +13,8 @@ import { navbarDropdown } from '../defaults/navbar-dropdown'
 window.addEventListener('DOMContentLoaded', (event) => {
   gsap.registerPlugin(ScrollTrigger)
 
+  gsap.set('.page-wrapper', { opacity: 1 })
+
   // Navbar Dropdown Hover
   navbarDropdown()
 
