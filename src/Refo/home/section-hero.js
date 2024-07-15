@@ -78,7 +78,7 @@ export const sectionHero = () => {
       )
     })
 
-    tl.add(pathLineTl)
+    tl.add(pathLineTl, '<')
     tl.add(pathLineGreenTl, '<')
       .from('.g-orange-line', {
         scale: 0,
@@ -134,7 +134,7 @@ export const sectionHero = () => {
     videoLoopTl
       .to('.home-hero_video-loop', {
         opacity: 1,
-        delay: 10,
+        delay: 7,
         duration: 0.1,
         onComplete: () => {
           if (heroDesktopVideoLoop) {
