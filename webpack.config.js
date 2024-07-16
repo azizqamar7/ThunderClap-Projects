@@ -16,6 +16,11 @@ module.exports = {
     ['refo/home']: './src/Refo/home/index.js',
     ['refo/about']: './src/Refo/about/index.js',
     ['refo/products/oboarding']: './src/Refo/products/onboarding/index.js',
+    ['refo/products/decisioning']: './src/Refo/products/decisioning/index.js',
+    ['refo/products/micro-workflows']:
+      './src/Refo/products/micro-workflows/index.js',
+    ['refo/products/sme']: './src/Refo/products/sme/index.js',
+    ['refo/products/consumer']: './src/Refo/products/consumer/index.js',
 
     ['steel']: './src/steel/index.js',
 
