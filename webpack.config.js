@@ -30,6 +30,8 @@ module.exports = {
     ['shopline/customers']: './src/shopline/customers/index.js',
     ['shopline/replatform']: './src/shopline/replatform/index.js',
     ['shopline/thankyou']: './src/shopline/home/index.js',
+
+    ['docai/home']: './src/docai/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
