@@ -16,6 +16,7 @@ export const sectionHero = () => {
     .from('.title-large', { y: 30, opacity: 0 }, '<35%')
     .from('.home_hero-content p', { y: 30, opacity: 0 }, '<35%')
     .from('.dynamic-navbar', { y: 30, opacity: 0 }, '<35%')
+    .from('.home_hero-content .display-mobile', { y: 30, opacity: 0 }, '<')
     .from(
       '.hero-icon',
       { scale: 0.5, opacity: 0, stagger: { amount: 0.4, from: 'random' } },
