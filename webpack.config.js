@@ -30,6 +30,8 @@ module.exports = {
     ['shopline/customers']: './src/shopline/customers/index.js',
     ['shopline/replatform']: './src/shopline/replatform/index.js',
     ['shopline/thankyou']: './src/shopline/home/index.js',
+    ['shopline/events/reimagine-2024']:
+      './src/shopline/events/reimagine-2024/index.js',
 
     ['docai/home']: './src/docai/index.js',
   },
