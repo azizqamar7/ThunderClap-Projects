@@ -33,9 +33,17 @@ export const sectionHero = () => {
       },
     })
 
-    dynamicNavTl
-      .to('.dynamic-navlinks', { marginRight: -30, opacity: 1 })
-      .to('.dynamic-button', { scale: 0.8 }, '<')
+    dynamicNavTl.to('.dynamic-navlinks', { marginRight: -80, opacity: 1 }).to(
+      '.dynamic-button',
+      {
+        scale: 0.7,
+        marginRight: '0.3rem',
+        marginBottom: '-5px',
+        marginTop: '-5px',
+      },
+      '<'
+    )
+    // .to('.dynamic-navbar', { scale: 0.95 }, '<')
 
     const imageForwardTl = gsap.timeline({
       defaults: {
