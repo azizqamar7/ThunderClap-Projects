@@ -17,6 +17,6 @@ export const sectionHero = () => {
     )
     .from('.event-hero h1', defaults, '<')
     .from('.event-hero_venue-wrap', defaults, '<45%')
-    .from('.event-hero_right', defaults, '<')
+    .from('.event-hero_right, [button-hero]', defaults, '<')
     .from('.event-lightbox', defaults, '<45%')
 }
