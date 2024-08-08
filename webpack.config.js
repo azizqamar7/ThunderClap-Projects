@@ -34,6 +34,8 @@ module.exports = {
       './src/shopline/events/reimagine-2024/index.js',
 
     ['docai/home']: './src/docai/index.js',
+    ['economize/home']: './src/economize/home/index.js',
+    ['economize/whyus']: './src/economize/why-us/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
