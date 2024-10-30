@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     createScrollTrigger('.section_home-stat', tl)
   }
 
-  sectionHomeStat()
+  // sectionHomeStat()
   // Section Home Stat
 
   // Section Home Speed
